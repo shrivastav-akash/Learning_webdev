@@ -6,8 +6,7 @@ app.listen(port, () => {
     console.log(`app is listening at port: ${port}`);
 });
 
-app.use((req, res), () => {
-    console.log("request recieved");
-    res.send("this is a basic response.....!");
-    
-});
+app.send((req, res), () => {
+    console.log("req received");
+    res.send("this is a basic responce");
+})
